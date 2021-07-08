@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="yonetici.master.cs" Inherits="yonetici_yonetici" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page" style="background-color: #E6E6E6; ">
+            <div class="clear hideSkiplink" style="color: #FFFFFF; background-image:url('../image/admin.png')">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                YÖNETİCİ SAYFASI<br />
+                <br />
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Profilim" Value="profilim">                        
+                            <asp:MenuItem Text="Profil Görüntüle-Düzenle" Value="Profil Görüntüle-Düzenle"  
+                                NavigateUrl="profilim.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Parolayı Değiştir" Value="Parolayı Değiştir" NavigateUrl="parolayidegistir.aspx"></asp:MenuItem>
+                        
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="İstatistikler" Value="istatistikler">
+
+                            <asp:MenuItem Text="Ürün İstatistiği" Value="Ürün İstatistiği" 
+                                NavigateUrl="~/yonetici/urun_istatistigi.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Kullanıcı İstatistiği" Value="Kullanıcı İstatistiği" 
+                                NavigateUrl="~/yonetici/kisi_istatistigi.aspx">
+                            </asp:MenuItem>
+
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Ekle" Value="Ekle">
+                            <asp:MenuItem NavigateUrl="~/yonetici/yoneticiekleme.aspx" 
+                                Text="Yönetici Ekleme" Value="Yönetici Ekleme"></asp:MenuItem>
+                            <asp:MenuItem Text="Bilgisayar Profesyoneli Ekleme" Value="Bilgisayar Prof. Ekleme" 
+                                NavigateUrl="~/yonetici/bilgprofekleme.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/yonetici/urunturuekleme.aspx" 
+                                Text="Ürün Türü Ekleme" Value="Ürün Türü Ekleme"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Kullanıcılar" Value="Kullanıcılar">
+
+                            <asp:MenuItem NavigateUrl="~/yonetici/toptancilar.aspx" Text="Toptancılar" 
+                                Value="Toptancılar"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/yonetici/ciftciler.aspx" Text="Çiftçiler" 
+                                Value="Çiftçiler"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/yonetici/bilgprof.aspx" 
+                                Text="Personel(Bilgisayar Profesyoneli)" 
+                                Value="Personel(Bilgisayar Profesyoneli)"></asp:MenuItem>
+
+                        </asp:MenuItem> 
+                        <asp:MenuItem Text="Mail Kutusu" Value="Mail Kutusu">
+                            <asp:MenuItem NavigateUrl="~/yonetici/mesaj_gonder.aspx" Text="Mail Gönder" 
+                                Value="Mail Gönder"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/yonetici/gelen_kutusu.aspx" Text="Gelen Kutusu" 
+                                Value="Gelen Kutusu"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/yonetici/gonderilenler.aspx" 
+                                Text="Gönderilen Kutusu" Value="Gönderilen Kutusu"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Panel ID="Panel1" runat="server" 
+                    style="margin-left: 821px; margin-top: 0px;" Height="25px" Width="44px">
+                    <asp:LinkButton ID="cikis" runat="server" ForeColor="Black" 
+                        onclick="cikis_Click" Font-Size="Medium">Çıkış</asp:LinkButton>
+                </asp:Panel>
+            </div>
+            <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+    </form>
+    
+            
+        
+</body>
+</html>
