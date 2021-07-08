@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="bilgisayarprof.master.cs" Inherits="bilgisayarprof_bilgisayarprof" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page" style="background-color: #E6E6E6;">
+            <div class="clear hideSkiplink" 
+                style="color: #FFFFFF; height: 99px; margin-left: 0px; font-size: small; font-weight: normal; background-image:url('../image/prof.png')">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BİLGİSAYAR 
+                PROFESYONELİ SAYFASI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButton1" runat="server" Font-Size="Medium" 
+                        ForeColor="White" onclick="LinkButton1_Click">Çıkış</asp:LinkButton>
+                <br />
+                <br />
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    Font-Bold="False" Font-Size="Small">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/bilgisayarprof/Default.aspx" Text="Anasayfa" 
+                            Value="Anasayfa"></asp:MenuItem>
+                        <asp:MenuItem Text="Profilim" Value="profilim">                        
+                            <asp:MenuItem Text="Profil Görüntüle-Düzenle" Value="Profil Görüntüle-Düzenle"  
+                                NavigateUrl="profilim.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Parolayı Değiştir" Value="Parolayı Değiştir" NavigateUrl="parolayidegistir.aspx"></asp:MenuItem>
+                        
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Eğitim Materyaleri" Value="Eğitim Materyaleri">
+
+                            <asp:MenuItem NavigateUrl="~/bilgisayarprof/materyalekle.aspx" 
+                                Text="Yeni Materyal Ekle" Value="Yeni Materyal Ekle"></asp:MenuItem>
+
+                            <asp:MenuItem NavigateUrl="~/bilgisayarprof/videolarim.aspx" Text="Videolar" 
+                                Value="Video"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/bilgisayarprof/dosyalarim.aspx" Text="Dosyalar" 
+                                Value="Dosyalar"></asp:MenuItem>
+
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Mail Kutusu" Value="Mail Kutusu">
+                            <asp:MenuItem NavigateUrl="~/bilgisayarprof/mesaj_gonder.aspx" 
+                                Text="Mail Gönder" Value="Mail Gönder"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/bilgisayarprof/gelen_kutusu.aspx" 
+                                Text="Gelen Kutusu" Value="Gelen Kutusu"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/bilgisayarprof/gonderilenler.aspx" 
+                                Text="Gönderilen Kutusu" Value="Gönderilen Kutusu"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            &nbsp;</div>
+            <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+    </form>
+    
+            
+        
+</body>
+</html>
+

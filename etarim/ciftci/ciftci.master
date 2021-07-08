@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ciftci.master.cs" Inherits="ciftci_ciftci" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/ciftcitoptanci.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page" style=" background:#E3F6CE; ">
+            <div class="clear hideSkiplink"  
+                
+                
+                
+                
+                
+                
+                style="color: #FFFFFF; height: 142px; font-size: large; font-weight: normal; background-image:url('../image/zeytin1.png');     "  >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ÇİFTÇİ SAYFASI<br />
+                <br />
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="False" IncludeStyleBlock="False" Orientation="Horizontal" 
+                    BackColor="#688A08" DynamicHorizontalOffset="2" Font-Names="Verdana" 
+                    Font-Size="Small" ForeColor="#7C6F57" StaticSubMenuIndent="10px" 
+                    Font-Bold="False" RenderingMode="List" >
+                    <DynamicHoverStyle BackColor="#688A08" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#688A08" />
+                    <DynamicSelectedStyle BackColor="#5D7B9D" />
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/ciftci/Default.aspx" Text="Anasayfa" 
+                            Value="Anasayfa"></asp:MenuItem>
+                        <asp:MenuItem Text="Profilim" Value="profilim">                        
+                            <asp:MenuItem Text="Profil Görüntüle-Düzenle" Value="Profil Görüntüle-Düzenle"  
+                                NavigateUrl="profilim.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Parolayı Değiştir" Value="Parolayı Değiştir" 
+                                NavigateUrl="~/ciftci/parolayidegistir.aspx"></asp:MenuItem>
+                        
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Ürünler" Value="Ürünler">
+
+                            <asp:MenuItem NavigateUrl="~/ciftci/urun_ekleme.aspx" 
+                                Text="Ürün Ekleme" Value="Ürün Ekleme"></asp:MenuItem>
+
+                            <asp:MenuItem NavigateUrl="~/ciftci/urunlerim.aspx" Text="Ürünlerim" 
+                                Value="Ürünlerim"></asp:MenuItem>
+
+                            <asp:MenuItem NavigateUrl="~/ciftci/urun_ara.aspx" Text="Toptancı İhtiyaç Ürünlerini Arama" 
+                                Value="Toptancı İhtiyaç Ürünlerini Arama"></asp:MenuItem>
+
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Toptancılar" Value="Toptancılar">
+                            <asp:MenuItem NavigateUrl="~/ciftci/toptancilarim.aspx" Text="Toptancılarım" 
+                                Value="Toptancılarım"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ciftci/toptanci_ara.aspx" Text="Toptancı Ekleme" 
+                                Value="Toptancı Ekleme"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Mail Kutusu" Value="Mail Kutusu">
+                            <asp:MenuItem NavigateUrl="~/ciftci/mesaj_gonder.aspx" Text="Mail Gönder" 
+                                Value="Mail Gönder"></asp:MenuItem>
+                            <asp:MenuItem Text="Gelen Kutusu" Value="Gelen Kutusu" 
+                                NavigateUrl="~/ciftci/gelen_kutusu.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Gönderilen Kutusu" Value="Gönderilen Kutusu" 
+                                NavigateUrl="~/ciftci/gonderilenler.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#5D7B9D" />
+                </asp:Menu>
+                <asp:Panel ID="Panel1" runat="server" 
+                    style="margin-left: 998px; margin-top: 0px;" Height="22px" Width="50px">
+                    <asp:LinkButton ID="LinkButton1" runat="server" Font-Size="Medium" 
+                        ForeColor="White" onclick="LinkButton1_Click">Çıkış</asp:LinkButton>
+                </asp:Panel>
+            </div>
+            <div class="main" >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+    </form>
+    
+            
+        
+</body>
+</html>
